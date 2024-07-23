@@ -1,3 +1,6 @@
+[build]
+publish = "grupo-8-JAMPA-shop/maqueta"
+
 [[redirects]]
 from = "/*"
 to = "maqueta/paginas/publico/home.html"
