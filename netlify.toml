@@ -1,5 +1,5 @@
 [build]
-publish = "paginas/publico"
+publish = "maqueta/paginas/publico"
 
 [[redirects]]
 from = "/*"
