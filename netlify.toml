@@ -1,5 +1,5 @@
 [build]
-publish = "grupo-8-JAMPA-shop/maqueta"
+publish = "maqueta/"
 
 [[redirects]]
 from = "/*"
