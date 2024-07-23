@@ -1,0 +1,7 @@
+[build]
+publish = "paginas/publico"
+
+[[redirects]]
+from = "/*"
+to = "/home.html"
+status = 200
