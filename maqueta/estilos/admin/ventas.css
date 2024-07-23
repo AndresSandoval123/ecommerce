@@ -1,0 +1,12 @@
+@import url(../../componentes/admin/css/navAdmin.css);
+
+/* IMPORTANTE
+Comenzar con mobile por buenas practicas */
+/* Estilos para mobile */
+/* Estilos para tablet */
+@media(min-width: 659px){
+}
+
+/* Estilos para escritorio */
+@media(min-width: 1250px){
+}

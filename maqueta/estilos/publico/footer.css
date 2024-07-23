@@ -1,0 +1,44 @@
+@import url(../styles.css);
+
+/* IMPORTANTE
+Comenzar con mobile por buenas practicas */
+/* Estilos para mobile */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+footer img{
+    width: 200px;
+}
+footer hr{
+    width: 100%;
+}
+.barrafooter{
+    display: flex;
+    gap: 20px;
+}
+.barrafooter li {
+    list-style: none;
+}
+.barrafooter a {
+    text-decoration: none;
+    color: var(--blanco-color);
+    font-size: small;
+}
+.barrafooter a:hover{
+    color: var(--naranjaOscuro-color);
+    text-decoration: underline 3px;
+    text-underline-offset: 5px;
+    transition: .4s all;
+}
+
+/* Estilos para tablet */
+@media(min-width: 659px){
+}
+
+/* Estilos para escritorio */
+@media(min-width: 1250px){
+}

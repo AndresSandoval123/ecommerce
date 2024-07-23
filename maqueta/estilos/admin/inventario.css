@@ -1,0 +1,525 @@
+@import url(../../componentes/admin/css/navAdmin.css);
+
+/* IMPORTANTE
+Comenzar con mobile por buenas practicas */
+/* Estilos para mobile */
+
+
+/* @media screen and (max-width: 659px) { */
+
+.contenidoTotal {
+    width: 90%;
+    height: auto;
+    margin: 0px auto;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: start; */
+    /* justify-content: center; */
+}
+
+.productForm {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 60px 45px 45px 60px 60px;
+    /* grid-template-rows: repeat(4, 60px); */
+    grid-template-areas: 
+        "desc desc desc desc desc cantidad"
+        "talla precio precio color color ."
+        "imagen1 imagen1 imagen1 imagen1 imagen1 imagen1 "
+        "imagen2 imagen2 imagen2 imagen2 imagen2 imagen2"
+        ". . boton boton . .";
+
+    gap: 1px;
+    /* max-width: 400px; */
+    width: 100%;
+    /* margin: 0px auto; */
+    overflow-x: hidden;
+    /* Evita el desplazamiento horizontal */
+    padding: 10px;
+    box-sizing: border-box;
+    /* Incluye el padding y border en el tamaño total del elemento */
+    background-color: #f2f2f2;
+}
+
+
+
+h1 {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    margin: 25px;
+}
+
+.nombre {
+    grid-area: desc;
+    display: flex;
+}
+
+.nombre .nombreCentrado {
+    flex-direction: column;
+    align-self: self-start;
+    /* background-color: red; */
+    width: 100%;
+}
+
+.nombre .nombreCentrado input {
+    width: 90%;
+    border-radius: 5px;
+    margin: 5px 0px;
+    padding: 5px;
+
+}
+
+.talla {
+    grid-area: talla;
+}
+
+.talla select,
+.color select {
+    width: 90%;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.color {
+    grid-area: color;
+}
+
+
+.imagenCentrado input {
+    margin-top: 5px;
+}
+
+.imagen1 {
+    grid-area: imagen1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.imagen2 {
+    grid-area: imagen2;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.imagen1,
+.imagen2 {
+    cursor: pointer;
+
+}
+    
+.imagen1 .imagenCentrado label, 
+.imagen2 .imagenCentrado label,
+.productForm .nombreCentrado label,
+.precio .precioCentrado label,
+.talla label,
+.cantidad .cantidadCentrado label,
+.color label{
+    font-size: 18px;
+    /* color: red; */
+}
+
+.imagen1 .imagenCentrado label,
+.imagen2 .imagenCentrado label{
+    display: block;
+    align-self: self-start;
+    margin-top: 5px;
+}
+
+
+.cantidad {
+    grid-area: cantidad;
+    display: flex;
+}
+
+.cantidad input {
+    width: 90%;
+}
+
+.precio {
+    grid-area: precio;
+    display: flex;
+}
+
+.precio input {
+    width: 90%;
+}
+
+.cantidadCentrado,
+.precioCentrado {
+    flex-direction: column;
+}
+
+.filtroId .input-group input,
+.filtroNombre .input-group input{
+    border-radius: 5px;
+}
+
+.cantidadCentrado input,
+.precioCentrado input,
+.filtroId .input-group,
+.filtroNombre .input-group {
+    width: 80%;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+
+}
+
+/* .filtroId .input-group {
+    background-color: red;
+} */
+
+.boton {
+    grid-area: boton;
+    display: flex;
+    flex-direction: column;
+    /* align-self: center;    */
+    margin-top: 23px;
+}
+
+.boton button {
+    border-radius: 5px;
+    padding: 5px 10px;
+    /* width: 100%; */
+    cursor: pointer;
+}
+
+
+/* ----------- Filtros de la tabla mobile ----------- */
+.filtros {
+    display: flex;
+    flex-direction: row;
+}
+
+.filtroId,
+.filtroNombre {
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    margin-right: 10px;
+    /* Ajusta el espacio entre el input y el botón */
+}
+
+.input-group input[type="text"] {
+    width: 80px;
+}
+
+.input-group input[type="text"] {
+    margin-right: 5px;
+    /* Ajusta el espacio entre el input y el botón */
+}
+
+.input-group button, .boton button {
+    padding: 5px 10px;
+    background-color: #033E8C;
+    color: white;
+}
+
+/*----------- Estilos session de los registros de productos mobile---------- */
+
+.tablaProductos {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 10px;
+    text-align: center;
+}
+
+.tablaProductos th, .tablaProductos td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center; /* Centra el contenido */
+}
+
+.tablaProductos th {
+    background-color: #f2f2f2;
+    color: red;
+}
+
+.tablaProductos tr td img{
+    width: 30px;
+}
+
+.tablaProductos tbody {
+    /* background-color: red; */
+}
+
+/* Estilos para vista tablet */
+@media(min-width: 659px) {
+    .productForm {
+        display: grid;
+        /* grid-template-columns: repeat(6, 1fr); */
+        grid-template-rows: 60px 45px 45px 60px;
+        /* grid-template-rows: repeat(4, 60px); */
+        grid-template-areas: "desc desc desc precio talla color"
+            "cantidad . . . . ."
+            "imagen1 imagen1 imagen1 imagen1 imagen1 imagen1 "
+            "imagen2 imagen2 imagen2 imagen2 imagen2 boton";
+
+        gap: 1px;
+        /* max-width: 400px; */
+        width: 100%;
+        /* margin: 0px auto; */
+        overflow-x: hidden;
+        /* Evita el desplazamiento horizontal */
+        padding: 10px;
+        box-sizing: border-box;
+        /* Incluye el padding y border en el tamaño total del elemento */
+        /* background-color: blueviolet; */
+    }
+
+
+    .nombre {
+        grid-area: desc;
+        /* background-color: lightcoral; */
+    }
+
+    .nombre .nombreCentrado {
+        /* background-color: red; */
+        width: 100%;
+    }
+
+    .nombre .nombreCentrado input {
+        border-radius: 5px;
+        margin: 5px 0px;
+        padding: 5px;
+
+    }
+
+    .talla {
+        grid-area: talla;
+        /* background-color: lightblue; */
+    }
+
+    .color {
+        grid-area: color;
+        /* background-color: lightgoldenrodyellow; */
+    }
+
+    
+
+    .imagen2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagen1,
+    .imagen2 {
+        /* background-color: red; */
+        align-self: center;
+        
+    }
+
+    .imagen1 {
+        grid-area: imagen1;
+        /* background-color: lightgreen; */
+    }
+
+    .imagen2 {
+        grid-area: imagen2;
+        /* background-color: lightyellow; */
+    }    
+    
+    .imagen1 .imagenCentrado label, 
+    .imagen2 .imagenCentrado label,
+    .productForm .nombreCentrado label,
+    .precio .precioCentrado label,
+    .talla label,
+    .cantidad .cantidadCentrado label,
+    .color label{
+        font-size: 18px;
+        /* color: red; */
+    }
+
+
+    .imagen1 .imagenCentrado label,
+    .imagen2 .imagenCentrado label{
+        display: block;
+    }
+
+
+    .cantidad {
+        grid-area: cantidad;
+        /* background-color: lightpink; */
+    }
+
+    .precio {
+        grid-area: precio;
+        /* background-color: lightgray; */
+    }
+
+    .boton {
+        grid-area: boton;
+        /* background-color: green; */
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        /* Ajusta según sea necesario */
+        cursor: pointer;
+    }
+
+    
+
+    .tablaProductos th{
+        font-size: 18px;
+    }
+    
+    .tablaProductos td{
+        font-size: 18px;
+    }
+       
+
+    /* ----------- Filtros de la tabla table ----------- */
+
+
+
+    /*----------- Estilos para los registros de productos table ---------- */
+    
+.tablaProductos {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.tablaProductos th, .tablaProductos td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center; /* Centra el contenido */
+}
+
+.tablaProductos th {
+    background-color: #f2f2f2;
+    color: red;
+}
+
+.tablaProductos tr td img{
+    width: 50px;
+}}
+
+
+
+/* Estilos para escritorio */
+@media(min-width: 1250px) {
+    .productForm {
+        display: grid;
+        /* grid-template-columns: repeat(6, 1fr); */
+        grid-template-rows: 60px 60px;
+        /* grid-template-rows: repeat(4, 60px); */
+        grid-template-areas: "desc desc cantidad precio talla color"
+            "imagen1 imagen1 imagen2 imagen2 boton .";
+
+        gap: 1px;
+        /* max-width: 400px; */
+        width: 100%;
+        /* margin: 0px auto; */
+        overflow-x: hidden;
+        /* Evita el desplazamiento horizontal */
+        padding: 10px;
+        box-sizing: border-box;
+        /* Incluye el padding y border en el tamaño total del elemento */
+ 
+    }
+    
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 18px;
+        text-align: center;
+        margin: 25px;
+    }
+    
+    .desc {
+        grid-area: desc;
+        /* background-color: lightcoral; */
+    }
+
+    .talla {
+        grid-area: talla;
+        /* background-color: lightblue; */
+    }
+
+    .color {
+        grid-area: color;
+        /* background-color: lightgoldenrodyellow; */
+    }
+
+    .imagen1 {
+        grid-area: imagen1;
+        /* background-color: lightgreen; */
+    }
+    
+    .imagen1 .imagenCentrado label, 
+    .imagen2 .imagenCentrado label,
+    .productForm .nombreCentrado label,
+    .precio .precioCentrado label,
+    .talla label,
+    .cantidad .cantidadCentrado label,
+    .color label{
+        font-size: 18px;
+        /* color: red; */
+    }
+
+    .imagen1 .imagenCentrado label,
+    .imagen2 .imagenCentrado label{
+        display: block;
+        align-self: center;
+    }
+
+    .imagen2 {
+        grid-area: imagen2;
+        /* background-color: lightyellow; */
+    }
+
+    .cantidad {
+        grid-area: cantidad;
+        /* background-color: lightpink; */
+    }
+
+    .precio {
+        grid-area: precio;
+        /* background-color: lightgray; */
+    }
+
+    .boton {
+        grid-area: boton;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        /* background-color: green; */
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        /* Ajusta según sea necesario */
+        cursor: pointer;
+    }
+
+    .tablaProductos th{
+        font-size: 18px;
+    }
+    
+    .tablaProductos td{
+        font-size: 18px;
+    }
+    
+    .tablaProductos tr td img{
+        width: 100px;
+    }}

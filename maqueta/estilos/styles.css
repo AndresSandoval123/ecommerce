@@ -1,0 +1,352 @@
+/* variables */
+:root {
+  --azul-color: #033E8C;
+  --azulClaro-color: #86CCDA;
+  --naranjaOscuro-color: #F27F0C;
+  --amarilloNaranja-color: #F7AD19;
+  --gris-color: #E3E3E3;
+  --blanco-color: #FFFFFF;
+  --negro-color: #1B1B1B;
+  --gris-claro: #F2F2F2;
+}
+
+/* *FORMATEAR PAGINA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gris-color);
+}
+/* Contenedor principal , Por buenas practicas se hace un contenedor donde este todo el body*/
+.contenedorPrincipal {
+  width: 100vw;
+  max-width: 1440px;/* Se va adaptar a una resolucion maxima de 1440 por ancho */
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--blanco-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Estilos para el encabezado es normal */
+.encabezado {
+  width: 100%;
+  height: 120px;
+  background-color: var(--azul-color);
+  position: fixed;
+  z-index: 1;
+}
+
+.footer {
+  /* Se mantiene en el pie de la pagina, de acuerdo a su contenido  */
+  width: 100%;
+  height: 200px;
+  color: var(--blanco-color);
+  background-color: var(--azul-color);
+}
+.contenidoTotal{
+  margin-top: 120px;
+}
+/* Estilos para mobile*/
+.contenido {
+  display: grid;
+  position: relative;
+  grid-template-areas: "bus bus bus"
+                        "ham log car";
+  gap: 5px;
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  z-index: 1;
+}
+/* Estilos para la barra de busqueda */
+.barraBusqueda {
+  grid-area: bus;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+.barraBusqueda input {
+  border: 0;
+  width: 70%;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  background-color: var(--gris-color);
+  padding: 0 10px;
+  font-size: 15px;
+  color: var(--azul-color);
+  font-family: "Montserrat", sans-serif;
+}
+.barraBusqueda input::placeholder {
+  color: var(--azul-color);
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+.barraBusqueda button {
+  border: 0;
+  width: 10%;
+  border-radius: 0 5px 5px 0;
+  background-color: var(--gris-color);
+  font-size: 20px;
+  color: var(--naranjaOscuro-color);
+}
+/* Estilos iconos y logo */
+.icoCerrar,.icoMenu {
+  display: grid;
+  font-size: 40px;
+  grid-area: ham;
+  color: var(--naranjaOscuro-color);
+  place-content: center;
+  transition: .4s;/* le da animacion al boton */
+  grid-column: 10px;
+}
+.icoMenu {
+  cursor: pointer;
+  transform: var(--state-abrir);
+}
+
+.icoCerrar {
+  cursor: pointer;
+  transform: var(--state-cerrar);
+  z-index: 1;
+  position: fixed;
+}
+.logo {
+  display: grid;
+  position: fixed;
+  grid-area: log;
+  z-index: 1;
+  place-content: center;
+  padding-top: 10px;
+  width: 50%;
+  height: 60px;
+}
+.logo img {
+  width: 200px
+}
+/* Comportamiento para el menu hamburguesa */
+.nav {
+  display: grid;
+  place-content: center;
+  position: relative;
+  --state-cerrar: scale(0);
+  --state-abrir: scale(1);
+  --state-menu: translate(-100%);
+}
+.nav:target { /* cuando el nav se comportara de la siguiente manera */
+  --state-menu: translate(0);
+  --state-cerrar: scale(1);/* se muestra el ico de cerrar y el ico de ham se desaparece */
+  --state-abrir: scale(0);
+}
+.barraNavegacion {
+  background-color: var(--gris-color);
+  transform: var(--state-menu);
+  display: grid;
+  position: fixed;/* para que salga de la grid */
+  place-content: center;
+  align-content:space-around;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 140px;
+  transition: .8s; /* le da animacion al menu */
+}
+.barraNavegacion li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 300px;
+  height: 60px;
+  border-radius: 10px;
+}
+.barraNavegacion a {
+  text-decoration: none;
+  color: var(--negro-color);
+}
+.barraNavegacion a:hover{
+  color: var(--naranjaOscuro-color);
+  text-decoration: underline 3px;
+  text-underline-offset: 5px;
+  transition: .4s all;
+}
+
+/* Estilo para el estado seleccionado */
+.activo{
+  color: var(--naranjaOscuro-color) !important;
+  text-decoration: underline 3px  !important;
+  text-underline-offset: 5px;
+}
+.icoUser {
+  display: none;
+}
+.icoUser :hover{
+  color: var(--naranjaOscuro-color);
+}
+
+.icoCarrito {
+  display: grid;
+  grid-area: car;
+  font-size: 40px;
+  color: var(--naranjaOscuro-color);
+  place-content: center;
+  
+}
+.icoCarrito :hover{
+  color: var(--naranjaOscuro-color);
+}
+
+.barraNavegacion .itemCerrarSesion {
+  display: none;
+}
+
+.barraNavegacion .itemBarra1 {
+  order: -1;
+}
+
+.barraNavegacion .itemBarra3 {
+  order: -1;
+}
+
+/* Estilos para tablet */
+@media(min-width: 659px) {
+/* Colocar sus estilos aqui */
+.contenidoTotal{
+  margin-top: unset;
+}
+.encabezado{
+  position: static;
+}
+.contenido {
+  display: grid;
+  grid-template-areas: "log bus bus ico car"
+                        "log nav nav nav nav";
+  grid-template-columns: "auto auto auto 1fr 1fr"
+                          "auto 1fr 1fr 1fr 1fr";
+  gap: 0px;
+  width: 100%;
+  padding: 0px;
+  margin-right: 30px;
+  position: static;
+}
+.logo {
+  padding: 10px;
+  height: 120px;
+  position: static;
+}
+.logo img {
+  width: 200px;
+}
+.barraNavegacion {
+  background-color: unset;/* unset se para que vuelva a su estado original */
+  position: static;
+  transform: unset;
+  transition: unset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 0 10px;
+  height: 100%;
+  width: 100%;
+}
+.barraNavegacion li {
+  width:auto;
+  height: 30px;
+  box-shadow: none;
+  font-size: 15px;
+}
+.barraNavegacion a {
+  color: var(--gris-color);
+}
+.barraNavegacion .itemCerrarSesion {
+  display: none;
+}
+.barraNavegacion .itemIniSesion {
+  display: none;
+}
+.nav {
+  --state-abrir: scale(0);
+  display: grid;
+  grid-area: nav;
+  place-content: unset;
+  gap: 0px;
+  padding: 0px;
+  z-index: 1;
+}
+.nav:target {
+  --state-cerrar: scale(0);
+}
+.icoMenu, .icoCerrar{
+  display: none;
+}
+.icoUser {
+  display: grid;
+  grid-area: ico;
+  font-size: 40px;
+  color: var(--gris-color);
+  place-content: center;
+}
+.icoCarrito {
+  font-size: 40px;
+  color: var(--gris-color);
+  place-content: center;
+}
+.barraNavegacion .itemBarra1 {
+  order: 0;
+}
+.barraNavegacion .itemBarra3 {
+  order: 0;
+}
+.barraBusqueda{
+  margin-top: 10px;
+  place-content: center;
+  width: 100%;
+}
+.barraBusqueda input {
+  border: 0;
+  width: 85%;
+  height: 40px;
+}
+.barraBusqueda input::placeholder {
+  color: var(--azul-color);
+  font-size: 15px;
+}
+.barraBusqueda button {
+  height: 40px;
+}
+.logo {
+  display: grid;
+  position: static;
+  grid-area: log;
+  place-content: center;
+  padding-top: 10px;
+  width: 100%;
+  height: unset;
+}
+.logo img {
+  width: 250px;
+}
+}
+/* Estilos para escritorio */
+@media(min-width: 1250px) {
+  /* Colocar sus estilos aqui */
+  .contenido {
+    grid-template-columns: 30% auto auto 5% 5%;
+  }
+  .logo img {
+    width: 300px;
+  }
+  .barraNavegacion {
+    padding: 0 20px;
+  }
+}

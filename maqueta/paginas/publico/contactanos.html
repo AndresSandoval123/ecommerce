@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="https://i.postimg.cc/qRvXjXKP/favicon.png" type="image/x-icon">
+  <title>Contactanos</title>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- importacion de iconos -->
+  <link rel="stylesheet" href="../../estilos/publico/contactanos.css" />
+  <link rel="stylesheet" href="../../estilos/publico/carritoCompras.css">
+  <link rel="stylesheet" href="../../estilos/publico/footer.css">
+</head>
+
+<body>
+  <main class="contenedorPrincipal">
+    <!--Encabezado Andres -->
+    <header class="encabezado" id="encabezadohead"></header>
+    <!--Body -->
+    <div class="contenidoTotal">
+      <!-- Primera seccion Banner  "Jennifer" -->
+      <section>
+        <!-- Contenedor principal del banner -->
+        <div class="dj-banner">
+          <!-- Contenedor para la imagen de fondo del banner -->
+          <div class="dj-bg">
+            <!-- Imagen principal dentro del banner -->
+            <img src="https://i.postimg.cc/C1D51RZQ/pikaso-texttoimage-Create-an-image-of-a-happy-and-beautiful-plussize-3.jpg" alt="Principal Image" class="dj-img" />
+            <!-- Contenedor para el texto superpuesto en la imagen del banner -->
+            <div class="dj-text">
+              <!-- Título dentro del texto del banner -->
+              <h1><b>Contactanos</b></h1>
+              <!-- Párrafo descriptivo dentro del texto del banner -->
+              <p>¡En Jampa estamos para servirte!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Segunda seccion " Información(plinio)" -->
+
+      <section class="mainEncuentranos">
+        <div class="encuentranos">
+          <div class="textoMapa">
+            <h2>JAMPA EN TU CIUDAD</h2>
+            <p> Usa nuestro mapa interactivo para encontrar las tiendas JAMPA más cercanas.</p>
+          </div>
+          <div class="mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31812.041508262642!2d-74.11885544507903!3d4.68189879874708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b25144634c9%3A0xaa39a3ad6b78b4cb!2sCentro%20Comercial%20Tit%C3%A1n%20Plaza!5e0!3m2!1ses-419!2sco!4v1717444046910!5m2!1ses-419!2sco"
+            style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tercera seccion formulario "Jennifer" -->
+
+      <section class="mainFormulario">
+        <div class="tituloFormulario">
+            <h3>¡En Jampa estamos para servirte!</h3>
+            <p>Dejanos tus datos y te contactaremos</p>
+        </div>
+        <div class="form_container_outer">
+          <form class="form" action="https://formspree.io/f/xoqgyzpr" method="POST">
+            <div class="form_container">
+              <div class="form_row">
+                <input type="text" class="form_input" placeholder="Nombre:" name="name" />
+                <input type="email" class="form_input" placeholder="Email:" name="email" />
+              </div>
+              <div class="form_row">
+                <input type="text" class="form_input" placeholder="Teléfono:" name="telefono" />
+                <input type="text" class="form_input" placeholder="Ciudad:" name="ciudad" />
+              </div>
+              <textarea class="form_input form_input--message" placeholder="Mensaje:" name="message"></textarea>
+              <input type="submit" value="Enviar" class="form_cta" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <h2>footer</h2>
+    </footer>
+    <!-- MODAL CARRITO DE COMPRAS -->
+    <!-- CONTENEDOR MAIN CARRITO DE COMPRAS -->
+    <section class="mainCarrito" id="mainCarrito"></section>
+  </main>
+
+    <!-- Se vincula el archivo js de acuerdo a la pagina -->
+    <script src="../../scripts/contactanos.js"></script>
+    <script src="../../componentes/publico/nav.js"></script>
+    <script src="../../componentes/publico/carritoComprasComponente.js"></script>
+    <script src="../../scripts/carritoCompras.js"></script>
+    <script src="../../componentes/publico/footer.js"></script>
+  </body>
+</html>

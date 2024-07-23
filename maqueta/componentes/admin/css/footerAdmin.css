@@ -1,0 +1,55 @@
+/* variables */
+:root {
+    --azul-color: #033E8C;
+    --azulClaro-color: #86CCDA;
+    --naranjaOscuro-color: #F27F0C;
+    --amarilloNaranja-color: #F7AD19;
+    --gris-color: #E3E3E3;
+    --blanco-color: #FFFFFF;
+    --negro-color: #1B1B1B;
+}
+
+/* *FORMATEAR PAGINA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gris-color);
+}
+
+/* Contenedor principal , Por buenas practicas se hace un contenedor donde este todo el body*/
+.contenedorPrincipal {
+    width: 100vw;
+    max-width: 1440px;
+    /* Se va adaptar a una resolucion maxima de 1440 por ancho */
+    min-height: 100vh;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--blanco-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilos mobile */
+
+.footer {
+    /* Se mantiene en el pie de la pagina, de acuerdo a su contenido  */
+    width: 100% !important;
+    height: 50px !important;
+    color: var(--blanco-color);
+    background-color: var(--azul-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para tablet*/
+@media screen and (min-width: 659px){
+}
+/* Estilos para escritorio */
+@media(min-width: 1250px){
+}

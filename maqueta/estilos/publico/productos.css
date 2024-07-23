@@ -1,0 +1,274 @@
+@import url(../styles.css);
+
+/* IMPORTANTE
+Comenzar con mobile por buenas practicas */
+/* Estilos para mobile */
+.contgrid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.contenidoTotal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.titulo{
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+.filtrar{
+    background-color: var(--gris-color);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 95%;
+}
+.filtrar h3{
+    background-color: var(--blanco-color);
+    display: grid;
+    place-content: center;
+    width: auto;
+    height: 25px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+.categoria, .talla{
+    display: flex;
+    gap: 10px;
+}
+.categoria p, .talla p{
+    display: flex;
+    font-size: 15px;
+    cursor: pointer;
+    width: 255px;
+    padding-left:10px ;
+}
+.categoria :hover , .talla  :hover{
+    background-color: var(--blanco-color);
+    border-radius:10px ;
+}
+.categoria label , .talla label{
+    width: 100%;
+    padding-left: 10px;
+}
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.contenTarjeta{
+    background-color:var(--gris-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 350px;
+    margin: 15px;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 5px 10px 0px;
+}
+/* estilo para la imagen */
+.imgTar{
+    width: 50%;
+    height: 210px;
+    padding-top: 10px;
+    object-fit: cover;
+    object-position: top;
+}
+/* Estilo para el texto descripción y precio */
+.texTarj{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    gap: 10px;
+    font-size: 12px;
+}
+/* estilos para seccion de opciones, boton y ver detalle */
+.opciones{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    font-size: 12px;
+}
+.opciones button{
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--azul-color);
+    color: var(--blanco-color);
+    width: 50%;
+    height: 40%;
+    border-radius: 10px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out; /* transición suave para el efecto de pulsación */
+}
+.opciones button:hover{
+    background-color: var(--naranjaOscuro-color);
+    border-color: var(--naranjaOscuro-color);
+    color: var(--blanco-color);
+}
+.opciones button:active{
+    transform: scale(0.9);
+}
+.opciones a{
+    text-decoration: none;
+    color: var(--negro-color);
+}
+.opciones a:hover{
+    color: var(--naranjaOscuro-color);
+}
+.paginacion{
+    width: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+.paginacion button{
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--azul-color);
+    color: var(--blanco-color);
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+/* Estilos para tablet */
+@media(min-width: 659px){
+.filtrar h3{
+    height: 30px;
+    font-size: 18px;
+}
+.contenTarjeta{
+    width: 320px;
+    height: 550px;
+} 
+.categoria, .talla{
+    gap: unset;
+}
+.categoria p, .talla p{
+    font-size: 17px;
+}
+.tarjeta{
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+}
+.contenTarjeta{
+    width: 30%;
+    height: 350px;
+    margin: 10px;
+    box-shadow: 0px 1px 5px 0px;
+}
+/* Estilo para el texto descripción y precio */
+.texTarj{
+    gap: 5px;
+    font-size: 14px;
+}
+/* Estilo para boton de pagina */
+.paginacion{
+    width: 30%;
+}
+}
+/* Estilos para escritorio */
+@media(min-width: 1250px){
+.contgrid{
+    display: grid;
+    grid-template-areas:"fil cont cont"
+                        "fil cont cont";
+    grid-template-columns: 298px 1fr 1fr;
+    justify-content: start;
+}
+/* Estilo para barra de filtrar */
+.filtrar{
+    padding: 5px;
+    margin-top: 25px;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 400px;
+    gap: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+}
+.filtrar h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+.catTilulo{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+.categoria, .talla{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+}
+.categoria p, .talla p{
+    display: flex;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+    padding-left: 10px;
+}
+.categoria label , .talla label{
+    width: 100%;
+    padding-left: 10px;
+}
+.tarjeta{
+    display: grid;
+    grid-area: cont;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+}
+.contenTarjeta{
+    display: flex;
+    width: 320px;
+    height: 500px;
+    margin: 25px;
+}
+.imgTar{
+    width: 50%;
+    height: 270px;
+    object-fit: cover;
+    object-position: top;
+}
+.paginacion{
+    width: 20%;
+    gap: 15px;
+}
+}

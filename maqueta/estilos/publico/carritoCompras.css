@@ -1,0 +1,179 @@
+/* CONTENEDOR MAIN CARRITO DE COMPRAS */
+html::-webkit-scrollbar{
+  appearance: none;
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track{
+  background-color: transparent;
+  width: 10px;
+  border-radius: 20px; 
+}
+
+html::-webkit-scrollbar-thumb{
+  background: rgb(195, 195, 195);
+  width: 10px;
+  border-radius: 20px;
+}
+
+.mainCarrito {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: var(--gris-color);
+  z-index: 100;
+  text-align: center;
+  right:-100%;
+  transition: 0.3s all ease-in-out;
+}
+.contenedorTitulo{
+  height: 120px;
+  width:100%;
+  background-color: var(--azul-color);
+}
+
+.btnCerrarCarrito{
+    position: absolute;
+    color: var(--blanco-color);
+    top: 18px;
+    left: 20px;
+    cursor: pointer;
+}
+
+/* TITULO CARRITO */
+.tituloCarrito {
+  text-align: center;
+  padding: 50px  15px ;
+  color: var(--blanco-color);
+}
+
+/* CONTENEDOR PADRE DE CARDS DE PRODUCTOS */
+.contenedorProductos {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  padding: 10px;
+  overflow: hidden;
+  }
+  
+
+.contenedorCards{
+  overflow-y: scroll;
+}
+
+.contenedorCards::-webkit-scrollbar{
+  appearance: none;
+  width: 5px;
+}
+
+.contenedorCards::-webkit-scrollbar-track{
+  background-color: var(--naranjaOscuro-color);
+  width: 5px;
+  border-radius: 20px; 
+}
+
+.contenedorCards::-webkit-scrollbar-thumb{
+  background: var(--azul-color);
+  width: 5px;
+  border-radius: 20px;
+}
+
+/* CARD BASE PARA UN PRODUCTO */
+.cardProducto {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--naranjaOscuro-color);
+  padding: 20px;
+}
+
+/* ATRIBUTOS DE LA IMAGEN DEL PRODUCTO */
+.cardProducto img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* DESCRIPCIONES DEL PRODUCTO */
+.detallesProducto {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* CONTENEDOR PRINCIPAL CANTIDAD PRODUCTO */
+.cantidadProducto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+}
+
+/* BOTONES + y - */
+.cantidadProducto button {
+  background-color: transparent;
+  color: var(--negro-color);
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--naranjaOscuro-color);
+  border-radius: 100%;
+}
+
+/* BOTON RESTAR PRODUCTOS */
+.btnEliminar {
+  background-color: var(--naranjaOscuro-color);
+  color: var(--blanco-color);
+  border: none;
+  height: 25px;
+  padding: 0 15px;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+/* SECCIÓN RESUMEN DE COMPRA */
+.carritoResumen {
+  padding: 15px;
+  text-align: center;
+}
+
+/* BOTÓN PARA ELIMINAR TODO LO DEL CARRITO */
+.btnVaciarCarrito {
+  color: var(--negro-color);
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 50px;
+}
+
+.carritoResumen .btnComprar {
+  background-color: var(--naranjaOscuro-color);
+  color: var(--blanco-color);
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 35px;
+  margin: 20px 0;
+}
+.btnComprar a{
+  color: var(--blanco-color);
+  font-size: 15px;
+}
+
+/* RESPONSIVE TABLET  */
+/* CONTENEDOR MAIN CARRITO DE COMPRAS */
+@media (min-width: 744px) {
+  /* TAMAÑO CARRITO */
+  .mainCarrito {
+    width: 350px;
+  }
+}
+
+/* RESPONSIVE DESKTOP  */
+/* CONTENEDOR MAIN CARRITO DE COMPRAS */
+@media (min-width: 1200px) {
+  .mainCarrito {
+    width: 400px;
+  }
+}

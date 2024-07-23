@@ -1,0 +1,322 @@
+@import url(../styles.css);
+
+.contenidoHome {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* SECCION DEL BANNER */
+.contenedorBanner {
+  background-color: blue;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.bannerImg{
+  background-image: url(https://i.postimg.cc/0jsQJ9D2/jampa-banner.jpg);
+  width: 100%;
+  height: 400px;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Texto Banner */
+.textoBanner {
+  display: grid;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  color: var(--blanco-color);
+  background: #033e8c62;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 10px
+}
+
+.textoBannerWeb {
+  display: none;
+}
+
+/* CTA Banner */
+.btnProductos {
+  background-color: var(--naranjaOscuro-color);
+  border: none;
+  padding: 10px;
+  color: var(--blanco-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btnProductos:hover {
+  background-color: var(--azul-color);
+}
+
+/* PRODUCTOS */
+
+.productosDestacados {
+  /* background-color: blueviolet; */
+  width: 100%;
+  text-align: center;
+}
+
+.contenedorProducto {
+  /* background-color: red; */
+  width: 100%;
+  height: 400px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.bx{
+  font-size: 50px;
+  color: var(--naranjaOscuro-color);
+  cursor: pointer;
+}
+
+.contenedorTarjetasHome {
+  /* background-color: aqua; */
+  width: 270px;
+  height: 420px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.contenedorTarjetasHomeJS {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+
+.contenedorTarjetasHomeJS p {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.pOrange {
+  color: var(--naranjaOscuro-color);
+}
+
+.contenedorTarjetasHomeJS button {
+  background-color: var(--azul-color);
+  color: var(--blanco-color);
+  width: 120px;
+  height: 28px;
+  border-radius: 10px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.contenedorTarjetasHomeJS button:hover {
+  background-color: var(--naranjaOscuro-color);
+  border-color: var(--naranjaOscuro-color);
+  color: var(--blanco-color);
+}
+
+.tarjetaProductoHome {
+  background-color: var(--gris-color);
+  width: 240px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  margin: 0 15px;
+  border-radius: 10px;
+  box-shadow: 1px 5px 10px 0px;
+}
+
+.tarjetaProductoHome p {
+  width: 240px;
+  text-align: center;
+}
+.imgTarjetaHome {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgTarjetaHome img {
+  /* width: 100%; */
+  height: 100%;
+}
+
+/* DONACIONES */
+.donaciones {
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.donaciones h2 {
+  margin: 15px;
+}
+
+.donacionesImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  object-fit: contain;
+}
+
+.donaciones img {
+  height: 350px;
+}
+
+.colorBanner {
+  background-color: rgb(117, 117, 117);
+  opacity: 30%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.textDonaciones {
+  width: 80%;
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  top: 190px;
+  right: 48px;
+}
+
+.textDonaciones p {
+  display: none;
+}
+
+.btnQuieroAyudar {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: var(--naranjaOscuro-color);
+  border: none;
+  border-radius: 10px;
+  color: var(--blanco-color);
+}
+
+.btnQuieroAyudar:hover {
+  background-color: var(--azul-color);
+}
+
+/* SECCIÓN SOBRE NOSOTROS */
+
+.sobreJampa {
+  background-color: var(--azul-color);
+  width: 100%;
+  color: var(--blanco-color);
+  padding: 40px;
+}
+
+.sobreJampaTextos {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-color: var(--blanco-color);
+  border-width: 2px;
+  border-style: solid;
+  padding: 30px;
+}
+
+.sobreJampa h3 {
+  padding-bottom: 15px;
+  font-size: 33px;
+}
+
+.sobreJampa p {
+  padding-bottom: 15px;
+  font-size: 16px;
+}
+
+.masInfo {
+  font-size: 16px;
+}
+
+.sobreJampa a {
+  text-decoration: none;
+  color: var(--naranjaOscuro-color);
+}
+
+/* SECCIÓN ESTADISTICAS */
+.estadisticas {
+  background-color: var(--naranjaOscuro-color);
+  color: var(--blanco-color);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  gap: 20px;
+  box-shadow: 10px 15px 40px rgb(146, 146, 146);
+}
+
+/* Estilos para tablet */
+@media (min-width: 659px) {
+  .textoBanner {
+    top: 60%;
+    left: 53%;
+  }
+
+  .contenedorTarjetasHome {
+    width:90%;
+   }
+
+   .textDonaciones {
+    width: 40%;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    right: 80px;
+  }
+
+}
+
+/* Estilos para escritorio */
+@media (min-width: 1250px) {
+
+  /* SECCION DEL BANNER */
+  .bannerImg{
+    height: 550px;
+  }
+
+  .textoBannerWeb {
+    display: flex;
+  }
+
+  .textDonaciones {
+    width: 22%;
+    top: 240px;
+    right:28%;
+  }
+
+  .sobreJampa {
+    padding: 70px 250px;
+  }
+
+  .sobreJampaTextos {
+    padding: 50px;
+  }
+
+  .masInfo{
+    font-size: 25px;
+   } 
+}

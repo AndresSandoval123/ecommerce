@@ -1,0 +1,480 @@
+@import url(../styles.css);
+/* Se importan los estilos de styles, que es la principal */
+
+/* IMPORTANTE
+Comenzar con mobile por buenas practicas */
+
+/* Estilos para mobile*/
+
+/* Colocar sus estilos aqui */
+
+/* Primera seccion "banner (Jen) */
+.dj-banner {
+  margin: 10px 0;  /* Margen superior de 10px, sin margen lateral ni inferior */
+  width: 100%;  /* Ancho del 100% del contenedor padre */
+}
+
+/* Estilo para el fondo del banner */
+.dj-bg {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+/* Estilo para la imagen dentro del banner */
+.dj-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Estilo para el texto dentro del banner */
+.dj-text {
+  display: none;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(251, 247, 247);
+}
+
+/* Ajustar la posición y el alineado del texto dentro del banner */
+.dj-banner .dj-text {
+  top: 70%;
+  /* Posicionar el texto al 50% de la altura del contenedor padre */
+  left: 10%;
+  /* Posicionar el texto al 10% del ancho del contenedor padre */
+  transform: translateY(-50%);
+  /* Ajustar la posición para centrar verticalmente el texto */
+  width: 80%;
+  /* Ancho del 80% del contenedor padre */
+  text-align: center;
+  /* Alinear el texto al centro */
+}
+
+/* Ajustar el tamaño de la fuente del título dentro del texto del banner */
+.dj-banner .dj-text h1 {
+  font-size: 6vw;
+  /* Tamaño de fuente mayor para dispositivos móviles */
+}
+
+/* Ajustar el tamaño de la fuente del párrafo dentro del texto del banner */
+.dj-banner .dj-text p {
+  font-size: 4vw;
+  /* Tamaño de fuente mayor para dispositivos móviles */
+}
+
+/* Segunda seccion "Información (Plinio)" */
+
+.mainEncuentranos{
+  background-color: var(--gris-color);
+  width: 100%;
+  height: 380px;
+  text-align: center;
+}
+.mapa iframe{
+  width: 90%; 
+  box-shadow: 0px 0px 10px 0px;
+  height:250px;
+  border-radius: 10px;
+}
+.textoMapa{
+  margin: 15px;
+}
+
+.textoMapa h2{
+  padding: 10px 0px;
+  color:var(--azul-color);
+}
+
+
+/* Tercera seccion "Formulario (Jennifer)" */
+
+/* Contenedor exterior del formulario */
+.tituloFormulario{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  color: var(--azul-color);
+}
+.tituloFormulario h3{
+  font-size: 23px;
+}
+/* Contenedor exterior del formulario */
+.form_container_outer {
+  width: 90%;
+  max-width: 350px;  /* Ancho máximo del contenedor */
+  margin: 20px auto;/* Centrar el contenedor horizontalmente con un margen superior de 20px */
+  background-color: #033E8C;  /* Color de fondo del contenedor */
+  border-radius: 20px;  /* Bordes redondeados para el contenedor */
+  overflow: hidden;  /* Asegura que los bordes redondeados se apliquen correctamente */
+  box-shadow: 0px 0px 10px 0px rgba(8, 2, 2, 0.1);  /* Sombra para un efecto de elevación */
+}
+/* Contenedor interior del formulario */
+.form_container {
+  padding: 15px;  /* Espacio interior para el contenido */
+  display: grid;  /* Uso de grid layout */
+  gap: 0.8em;  /* Espacio entre los elementos del grid */
+}
+/* Estilos para los campos de entrada */
+.form_input {
+  width: 100%;
+  font-size: 0.9rem; /* Tamaño de fuente aumentado */
+  padding: 8px;  /* Reducir el espacio interior para los campos de entrada */
+  border-radius: 10px;  /* Bordes redondeados */
+  margin: 5px;
+}
+
+/* Estilos específicos para el campo de mensaje */
+.form_input--message {
+  padding: 1em .8em;
+  /* Reducir el espacio interior para el campo de mensaje */
+  height: 100px;
+  /* Reducir la altura del campo de mensaje */
+}
+
+/* Estilos para el botón de envío */
+.form_cta {
+  font-family: inherit;
+  /* Heredar la fuente del contenedor padre */
+  background-color: #F27F0C;
+  /* Color de fondo del botón */
+  border-radius: .2em;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cursor cambia a puntero al pasar sobre el botón */
+  /* Ocupar dos columnas completas */
+  grid-column: 1 / -1;
+  /* Alinear al centro */
+  justify-self: center;
+  font-size: 0.80rem;
+  /* Reducir el tamaño de la fuente del botón */
+  padding: 0.6em .8em;
+  /* Reducir el padding del botón */
+  border-radius: .2em;
+  /* Bordes redondeados */
+  font-weight: 400;
+  /* Peso de la fuente */
+}
+
+/* Estilos para tablet */
+@media (min-width: 659px) {
+  /* Colocar sus estilos aqui */
+
+  /* Primera seccion "banner (Jen) */
+  .dj-banner {
+    margin: 10px 0;
+    /* Margen superior de 10px, sin margen lateral ni inferior */
+    width: 100%;
+    /* Ancho del 100% del contenedor padre */
+  }
+
+  /* Estilo para el fondo del banner */
+  .dj-bg {
+    background-image: url(bg-img-banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    position: relative;
+  }
+
+  /* Estilo para la imagen dentro del banner */
+  .dj-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Estilo para el texto dentro del banner */
+  .dj-text {
+    text-align: left;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(247, 244, 244);
+  }
+
+  /* Ajustar la posición y el alineado del texto dentro del banner */
+  .dj-banner .dj-text {
+    top: 70%;
+    /* Posicionar el texto al 50% de la altura del contenedor padre */
+    left: 10%;
+    /* Posicionar el texto al 10% del ancho del contenedor padre */
+    transform: translateY(-50%);
+    /* Ajustar la posición para centrar verticalmente el texto */
+    width: 60%;
+    /* Ancho del 60% del contenedor padre */
+    text-align: center;
+    /* Alinear el texto al centro */
+  }
+
+  /* Ajustar el tamaño de la fuente del título dentro del texto del banner */
+  .dj-banner .dj-text h1 {
+    font-size: 4vw;
+    /* Tamaño de fuente mayor para tabletas */
+  }
+
+  /* Ajustar el tamaño de la fuente del párrafo dentro del texto del banner */
+  .dj-banner .dj-text p {
+    font-size: 3vw;
+    /* Tamaño de fuente mayor para tabletas */
+  }
+
+
+  .info {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1000px;
+  }
+
+  .info-titulo {
+    display: block;
+    /* Elimina el titulo en esta vista */
+  }
+
+  
+/* SEGUNDA SECCIÓN PARA TABLET */
+.mainEncuentranos{
+  height: 350px;
+}
+
+  /* Tercera seccion "Formulario (Jennifer)" */
+  .mainFormulario{
+    /* background-color: red; */
+    position: relative;
+  }
+
+  /* Contenedor interior del formulario */
+  .form_container {
+    padding: 15px;
+    /* Espacio interior para el contenido */
+    display: grid;
+    /* Uso de grid layout */
+    gap: 0.8em;
+    /* Espacio entre los elementos del grid */
+  }
+
+  /* Estilos para los campos de entrada */
+  .form_input {
+    font-size: 0.9rem;
+    /* Tamaño de fuente aumentado */
+    padding: .6em .8em;
+    /* Reducir el espacio interior para los campos de entrada */
+    border-radius: 10px;
+    /* Bordes redondeados */
+  }
+
+  /* Estilos específicos para el campo de mensaje */
+  .form_input--message {
+    padding: 1em .8em;
+    /* Reducir el espacio interior para el campo de mensaje */
+    height: 100px;
+    /* Reducir la altura del campo de mensaje */
+  }
+
+  /* Estilos para el botón de envío */
+  .form_cta {
+    font-family: inherit;
+    /* Heredar la fuente del contenedor padre */
+    background-color: #F27F0C;
+    /* Color de fondo del botón */
+    border-radius: .2em;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cursor cambia a puntero al pasar sobre el botón */
+    /* Ocupar dos columnas completas */
+    grid-column: 1 / -1;
+    /* Alinear al centro */
+    justify-self: center;
+    font-size: 0.80rem;
+    /* Reducir el tamaño de la fuente del botón */
+    padding: 0.6em .8em;
+    /* Reducir el padding del botón */
+    border-radius: .2em;
+    /* Bordes redondeados */
+    font-weight: 400;
+    /* Peso de la fuente */
+  }
+
+
+
+}
+
+/* Estilos para escritorio */
+@media(min-width: 1250px) {
+  /* Primera seccion "banner (Jen) */
+  .dj-banner {
+    margin: 10px 0;    /* Margen superior de 10px, sin margen lateral ni inferior */
+    width: 100%;    /* Ancho del 100% del contenedor padre */
+    height: 500px;
+  }
+  /* Estilo para la imagen dentro del banner */
+  .dj-img {
+    display: block;/* Hacer que el elemento se comporte como un bloque */
+    width: 100%;/* Ancho del 100% del contenedor padre */
+    height: 515px;
+    object-fit: cover;/* Escalar la imagen para cubrir el contenedor sin distorsionar */
+  }
+
+  /* Estilo para el texto dentro del banner */
+  .dj-text {
+    display: block;
+    text-align: center;
+    /* Alinear el texto al centro */
+    padding: 10px;
+    /* Relleno interno de 10px */
+    position: absolute;
+    /* Posición absoluta para ubicar el texto en un lugar específico dentro del contenedor */
+    top: 50%;
+    /* Posicionar el texto al 50% de la altura del contenedor padre */
+    left: 50%;
+    /* Posicionar el texto al 50% del ancho del contenedor padre */
+    transform: translate(-50%, -50%);
+    /* Ajustar la posición para centrar completamente el texto */
+    color: #000000;
+    /* Color del texto en negro para asegurar su visibilidad sobre la imagen */
+  }
+
+  /* Ajustar la posición y el alineado del texto dentro del banner */
+  .dj-banner .dj-text {
+    display: flex;
+    flex-direction: column;
+
+    top: 50%;
+    /* Posicionar el texto al 50% de la altura del contenedor padre */
+    left: 5%;
+    /* Posicionar el texto al 10% del ancho del contenedor padre */
+    transform: translateY(-10%);
+    /* Ajustar la posición para centrar verticalmente el texto */
+    width: 40%;
+    /* Ancho del 40% del contenedor padre */
+    text-align: left;
+    /* Alinear el texto a la izquierda */
+  }
+
+  /* Ajustar el tamaño de la fuente del título dentro del texto del banner */
+  .dj-banner .dj-text h1 {
+    font-size: 30px;
+    /* Tamaño de fuente calculado basado en la anchura de la ventana */
+  }
+
+  /* Ajustar el tamaño de la fuente del párrafo dentro del texto del banner */
+  .dj-banner .dj-text p {
+    font-size: 18px;
+    /* Tamaño de fuente calculado basado en la anchura de la ventana */
+  }
+  
+/* SEGUNDA SECCIÓN */
+  .mainEncuentranos{
+    height: 550px;
+  }
+  .mapa iframe{
+    height: 400px;
+
+  }
+  /* Tercera seccion "Formulario (Jennifer)" */
+  .tituloFormulario{
+    height: 100px;
+  }
+  .tituloFormulario h3{
+    font-size: 23px;
+  }
+  .mainFormulario{
+    position: relative;
+  }
+  .form_container_outer {
+    width: 100%;
+    /* Ancho del 100% del contenedor padre */
+    max-width: 500px;
+    /* Ancho máximo del contenedor */
+    margin: 20px auto 20px;
+    /* Margen superior e inferior de 20px, centrado horizontalmente */
+    background-color: #033E8C;
+    /* Color de fondo del contenedor */
+    border-radius: 25px;
+    /* Bordes redondeados para el contenedor */
+    overflow: hidden;
+    /* Asegura que los bordes redondeados se apliquen correctamente */
+    box-shadow: 0px 0px 10px 0px rgba(8, 2, 2, 0.1);
+    /* Sombra para un efecto de elevación */
+  }
+  /* Fila del formulario */
+  .form_row {
+    display: grid;
+    /* Uso de grid layout */
+    gap: 1em;
+    /* Espacio entre los elementos del grid */
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas de igual ancho */
+  }
+  /* Estilos para los campos de entrada */
+  .form_input {
+    font-family: inherit;
+    /* Heredar la fuente del contenedor padre */
+    font-size: 1rem;
+    /* Tamaño de fuente */
+    padding: .8em 1em;
+    /* Espacio interior para los campos de entrada */
+    outline: none;
+    /* Sin contorno al enfocar */
+    border: none;
+    /* Sin borde */
+    border: 1px solid #bbb0b0;
+    /* Borde de 1px con color gris */
+    border-radius: 15px;
+    /* Bordes redondeados */
+  }
+  /* Estilos específicos para el campo de mensaje */
+  .form_input--message {
+    resize: none;
+    /* No permitir redimensionar el campo */
+    padding: 1.8em 1em;
+    /* Espacio interior para el campo de mensaje */
+    height: 150px;
+    /* Altura aumentada para más espacio */
+    margin-bottom: .5em;
+    /* Espacio inferior */
+    /* Ocupar dos columnas completas */
+    grid-column: 1 / -1;
+  }
+  /* Estilos para el botón de envío */
+  .form_cta {
+    font-family: inherit;
+    /* Heredar la fuente del contenedor padre */
+    font-size: 0.875rem;
+    /* Tamaño de fuente del botón reducido */
+    background-color: #F27F0C;
+    /* Color de fondo del botón */
+    color: #000000;
+    /* Color del texto del botón cambiado a negro */
+    border: none;
+    /* Sin borde */
+    font-weight: 400;
+    /* Peso de la fuente */
+    padding: 0.8em 1em;
+    /* Padding reducido para hacer el botón más pequeño */
+    border-radius: .2em;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cursor cambia a puntero al pasar sobre el botón */
+    /* Ocupar dos columnas completas */
+    grid-column: 1 / -1;
+    /* Alinear al centro */
+    justify-self: center;
+  }
+
+}

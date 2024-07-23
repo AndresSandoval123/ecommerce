@@ -1,0 +1,330 @@
+@import url(../styles.css);
+
+/* IMPORTANTE
+Comenzar con mobile por buenas practicas */
+/* Estilos para mobile */
+
+/* recordar que la clase contenido total tiene un margintop  */
+.contenedorPrincipal{
+    background-color: var(--gris-color);
+    justify-content: center;
+    align-items:center;
+}
+.contenidoTotal{
+    background-color: var(--azul-color);
+    color: var(--blanco-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90vh;
+    border-radius: 15px;
+    margin: 0;
+}
+
+/* Estilos logo */
+.logoo1,.logoo2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoo1 p, .logoo2 p{
+    display: none;
+}
+.logoo1 img,.logoo2 img{
+    width: 300px;
+}
+/* Estilos para las secciones */
+.secRegistro, .secIngresar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* Estilos para formularios */
+.registroForm, .ingresarForm{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.secRegistro input, .secIngresar input{
+    border-radius: 5px;
+    height: 25px;
+    font-family: "Montserrat", sans-serif;
+    padding-left: 5px;
+    width: 100%;
+    padding: 15px;
+    outline: none;/* Elimina lineas de seleccion  */
+    border: none;
+}
+.nombres,.apellidos, .correo, .password, .passwordconf,.correoIng, .passwordIng{
+    position: relative;
+    font-size: 14px;
+    width: 250px;
+    color: var(--negro-color)
+}
+.secRegistro label, .secIngresar label{
+    position: absolute;
+    left: 2px;
+    padding: 5px 8px;
+}
+/* animacion para los inputs */
+.secRegistro input:focus ~ label,.secRegistro input:valid ~ label,.secIngresar input:focus ~ label,.secIngresar input:valid ~ label{
+    color:var(--blanco-color);
+    transform: translateY(-90%);
+    transition: .4s;
+}
+.olvido{
+    text-decoration: none;
+    color: var(--blaco-color);
+    font-size: 14px;
+}
+.olvido:hover{
+    color: var(--naranjaOscuro-color);
+}
+/* Estilos para los botones */
+.btnIng, .btnCrear{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.btnIng button, .btnCrear button{
+    width: 40%;
+    height: 30px;
+    border-radius: 20px;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+}
+.btnIng button:hover, .btnCrear button:hover{
+    box-shadow: 0px 0px 2px 0px;
+}
+.btnIng button:active, .btnCrear button:active{
+    box-shadow: 0px 0px 10px 0px white;
+}
+/* estilos input boton */
+.crearR, .ingresaI{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.ingresaI input, .crearR input{
+    color: var(--blanco-color);
+    background-color: var(--naranjaOscuro-color);
+    width: 50%;
+    height: 30px;
+    border: 2px;
+    padding: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.ingresaI input:hover, .crearR input:hover{
+    color: var(--blanco-color);
+    box-shadow: 0px 0px 2px 0px;
+}
+.ingresaI input:active, .crearR input:active{
+    box-shadow: 0px 0px 10px 0px;
+    color: var(--blaco-color);
+}
+/* Estilos volver al inicio */
+.volver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+.volver a{
+    color: var(--blanco-color);
+    text-decoration: none;
+}
+.volver a:hover{
+    color: var(--naranjaOscuro-color);
+}
+/* dinamismo */
+.dinami{
+    position: absolute;
+    transition:.4s linear;
+    opacity: 0;
+    visibility: hidden;
+}
+/* Estilos para tablet */
+@media(min-width: 659px){
+.contenidoTotal{
+    width: 70%;
+}
+/* Estilo logo */
+.logoo1 img,.logoo2 img {
+    width: 340px;
+}
+/* Estilos titulos */
+.registro,.ingresar{
+    font-size: 25px;
+}
+/* Estilos secciones */
+.secRegistro input, .secIngresar input{
+    height: 35px;
+    font-size: 18px;
+}
+/* Estilos formularios */
+.registroForm, .ingresarForm{
+    gap:35px
+}
+.nombres,.apellidos, .correo, .password, .passwordconf,.correoIng, .passwordIng{
+    font-size: 20px;
+    width: 320px;
+}
+/* Estilos para los botones */
+.btnIng button, .btnCrear button{
+    width: 30%;
+    height: 45px;
+    font-size: 15px;
+}
+/* Estilos volver */
+.volver{
+    font-size: 20px;
+}
+}
+
+/* Estilos para escritorio */
+@media(min-width: 1250px){
+.contenedorPrincipal{
+    background-color: var(--blanco-color);
+}
+.contenidoTotal{
+    flex-direction: row;
+    width: 70%;
+    height: 70vh;
+}
+.secRegistro input:focus ~ label,.secRegistro input:valid ~ label,.secIngresar input:focus ~ label,.secIngresar input:valid ~ label{
+    color:var(--negro-color);
+}
+/* Estilos seccion registro */
+.secRegistro{
+    background-color: var(--gris-color);
+    display: grid;
+    grid-template-areas:"log til"
+                        "log for"
+                        "log for"
+                        "log vol";
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    text-align: center;
+    border-radius: 15px;
+    height: 100%;
+    color: var(--negro-color);
+}
+.registro{
+    display: grid;
+    grid-area: til;
+    align-content: end;
+    height: 100%;
+}
+.registroForm{
+    display: grid;
+    grid-area: for;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    gap: 28px;
+}
+.logoo1, .logoo2{
+    background-color: var(--azul-color);
+    color: var(--blanco-color);
+    display: grid;
+    grid-area: log;
+    justify-items: center;
+    align-items: center;
+    align-content: start;
+    height:100%;
+    border-radius: 15px;
+    width: 100%;
+    gap: 30px;
+}
+.logoo1 p, .logoo2 p{
+    display: block;
+}
+.logoo1 img, .logoo2 img{
+    width: 80%;
+    height: 28vh;
+    object-fit: contain;
+    object-position:bottom;
+}
+.btnIng{
+    position: absolute;
+    width: 50%;
+    font-size: 20px;
+    left:0%;
+    bottom: 35%;
+}
+.btnIng button{
+    border-radius: 20px;
+}
+.volver{
+    display: grid;
+    grid-area: vol;
+    height: 50%;
+}
+/* Estilos seccion ingresar */
+.secIngresar{
+    background-color: var(--gris-color);
+    display: grid;
+    grid-template-areas:"til log"
+                        "for log"
+                        "for log"
+                        "vol log";
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    text-align: center;
+    border-radius: 15px;
+    height: 100%;
+    color: var(--negro-color);
+}
+.ingresar{
+    display: grid;
+    grid-area: til;
+    align-content: end;
+    height: 100%;
+}
+.ingresarForm{
+    display: grid;
+    grid-area: for;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    gap: 28px;
+}
+
+.btnCrear{
+    position: absolute;
+    width: 50%;
+    font-size: 20px;
+    right:0%;
+    bottom: 35%;
+}
+.btnCrear button {
+    border-radius: 20px;
+}
+/* estilos input boton */
+.ingresaI input:hover, .crearR input:hover{
+    color: var(--negro-color);
+}
+.ingresaI input:active, .crearR input:active{
+    color: var(--negro-color);
+}
+.volver{
+    display: grid;
+    grid-area: vol;
+    height: 50%;
+}
+.volver a{
+    color: var(--negro-color);
+}
+}

@@ -1,0 +1,189 @@
+@import url(../styles.css);
+
+/* Estilos para mobile */
+.contenedorPrincipal {
+  position: relative;
+}
+
+/*ESTILOS DEL CONTENEDOR PRINCIPAL*/
+.inforProducto {
+
+  display: none;
+  justify-content:center;
+  align-items: center;
+  width: 100vw;
+  max-width: 1440px;
+  height: 100vh;
+  position: fixed;
+background-color: rgba(0, 0, 0, 0.548);
+  backdrop-filter: blur(10px);
+  top: 60px;
+  animation-name: abierto;
+  animation-duration: 0.4s;
+}
+
+/*ESTILOS DE LA TARJETA DE LA IMAGEN Y DETALLE DE PRODUCTO*/
+.contenidoProducto {
+  background-color: var(--gris-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 500px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px;
+}
+
+/* SECCIÓN CERRAR MODAL */
+.btnCerrar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+
+.bi-x-circle {  
+  font-size: 20px;
+  color: var(--azul-color);
+}
+
+.modalcerrado {
+  animation-name: cerrado;
+}
+
+
+/* SECCIÓN TITULO E IMAGEN*/
+.nombreProducto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgProducto {
+  width: 50%;
+  object-fit: contain;
+}
+
+.escritorio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+/*ESTILOS PARA LA DESCRIPCIÓN DEL PRODUCTO*/
+.descripcionProducto {
+  text-align: center;
+  color: var(--negro-color);
+  width: 100%;
+}
+
+/*ESTILOS PARA SECCIÓN DE CANTIDAD*/
+.colorCantidad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+}
+
+/*ESTILOS TALLAS*/
+.tallas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+/*ESTILOS PRECIO*/
+.precio {
+  color: var(--naranjaOscuro-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*ESTILOS BOTON CARRITO*/
+.carrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 35px;
+}
+
+.carrito button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--naranjaOscuro-color);
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  height: 100%;
+  padding: 15px;
+}
+
+.carrito button:hover {
+  background-color: var(--azul-color);
+  border-color: var(--azul-color);
+}
+
+/*ESTILOS PARA FRASE MOTIVACIONAL*/
+.frase {
+  text-align: center;
+  color: var(--azul-color);
+}
+
+/* Estilos para tablet */
+@media (min-width: 659px) {
+
+  .inforProducto {
+    top: 0;
+  }
+
+  .contenidoProducto {
+    width: 350px;
+    padding: 20px;
+    height: 520px;
+  }  
+}
+
+/* Estilos para escritorio */
+@media (min-width: 1250px) {
+  
+  .inforProducto {
+    top: 60px;
+  }
+
+}
+
+/* ANIMACIÓN APERTURA MODAL */
+@keyframes abierto {
+  from {
+    opacity: 0; /* Comienza con opacidad 0 (invisible) */
+    transform: scale(0.8); /* Empieza un poco más pequeño */
+  }
+  to {
+    opacity: 1; /* Termina con opacidad 1 (totalmente visible) */
+    transform: scale(1); /* Escala completa (normal) */
+  }
+}
+
+/* ANIMACIÓN CIERRE MODAL */
+@keyframes cerrado {
+  from {
+    opacity: 1; /* Comienza con opacidad 1 (totalmente visible) */
+    transform: scale(1); /* Empieza con tamaño normal */
+  }
+  to {
+    opacity: 0; /* Termina con opacidad 0 (invisible) */
+    transform: scale(0.8); /* Escala un poco más pequeño */
+  }
+}

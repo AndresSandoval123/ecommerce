@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVENTARIO</title>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="https://i.postimg.cc/qRvXjXKP/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../estilos/admin/inventario.css">
+</head>
+
+<body>
+    <div class="contenedorPrincipal">
+
+        <header class="encabezado" id="encabezadohead">
+        </header>
+        <div class="contenidoTotal">
+            <h1>Inventario</h1>
+    
+            <h2>Registrar nuevo producto</h2>
+            <form class="productForm" id="productoForm">
+                <div class="nombre" id="nombre">
+                    <div class="nombreCentrado">
+                        <label for="productNombre">Nombre del producto:</label>
+                        <input type="text" id="productNombre" name="productNombre" required>
+                    </div>
+                </div>
+                <div class="precio">
+                    <div class="precioCentrado">
+                        <label for="productPrecio">Precio:</label>
+                        <input type="number" id="productPrecio" name="productPrecio" required>
+                    </div>
+                </div>
+                <div class="talla">
+                    <label for="talla">Talla:</label>
+                    <select id="talla" name="talla" required>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </div>
+                <div class="cantidad">
+                    <div class="cantidadCentrado">
+                        <label for="productCantidad">Cantidad:</label>
+                        <input type="number" id="productCantidad" name="productCantidad" required>
+                    </div>
+                </div>
+                <div class="color">
+                    <label for="color">Color:</label>
+                    <select id="color" name="color" required>
+                        <option value="blanco">Blanco</option>
+                        <option value="Negro">Negro</option>
+                        <option value="azul">Azul</option>
+                        <option value="morado">Morado</option>
+                        <option value="amarillo">Amarillo</option>
+                    </select>
+                </div>
+                <div class="imagen1">
+                    <div class="imagenCentrado">
+                        <label for="productImagen1">Imagen 1:</label>
+                        <input type="file" id="productImagen1" name="productImagen1" accept="image/*">
+                    </div>
+                </div>
+                <div class="imagen2">
+                    <div class="imagenCentrado">
+                        <label for="productImagen2">Imagen 2:</label>
+                        <input type="file" id="productImagen2" name="productImagen2" accept="image/*">
+                    </div>
+                </div>
+                <div class="boton">
+                    <button type="button" id="agregarProductoBtn">Agregar</button>
+                </div>
+            </form>
+    
+            <h2>Lista de Productos</h2>
+            <div class="filtros">
+                <div class="filtroId">
+                    <label for="filtroId">Filtrar por ID:</label>
+                    <div class="input-group">
+                        <input type="text" id="filtroId" onkeyup="filtrarTabla('id')">
+                        <button>Buscar</button>
+                    </div>
+                </div>
+    
+                <div class="filtroNombre">
+                    <label for="filtroNombre">Filtrar por Nombre:</label>
+                    <div class="input-group">
+                        <input type="text" id="filtroNombre" onkeyup="filtrarTabla('nombre')">
+                        <button>Buscar</button>
+                    </div>
+                </div>
+            </div>
+    
+            <table class="tablaProductos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Talla</th>
+                        <th>Color</th>
+                        <th>Img1</th>
+                        <th>Img2</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaProductosBody">
+                </tbody>
+            </table>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+        </footer>
+    </div>
+    <!-- Se vincula el archivo js -->
+    <!-- <script src="../../consumoApi/scripts-inventario.js"></script> -->
+    <script src="../../scripts/scriptsInventario.js"></script>
+    <script src="../../componentes/admin/js/navAdmin.js"></script>
+</body>
+
+</html>

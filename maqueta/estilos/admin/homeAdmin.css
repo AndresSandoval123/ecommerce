@@ -1,0 +1,77 @@
+@import url(../../componentes/admin/css/navAdmin.css);
+
+/* IMPORTANTE
+Comenzar con mobile por buenas practicas */
+/* Estilos para mobile */
+.contenidoTotal{/* Contenedor principal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Estilo para la card */
+.cardAdmin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 250px;
+    background-color: var(--gris-color);
+    margin: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px;
+}
+/* Imagen */
+.cardAdmin img{
+    opacity: 0.5;
+    width: 130px;
+}
+/* Estilo para boton */
+.cardAdmin button{
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--azul-color);
+    width:140px;
+    height: 10%;
+    border-radius: 10px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out; /* transición suave para el efecto de pulsación */
+}
+.cardAdmin a{
+    color: var(--blanco-color);
+    text-decoration: none;
+}
+.cardAdmin button:hover{
+    background-color: var(--naranjaOscuro-color);
+    border-color: var(--naranjaOscuro-color);
+    color: var(--blanco-color);
+}
+.cardAdmin button:active{
+    transform: scale(0.9);
+}
+
+/* Estilos para tablet */
+@media(min-width: 659px){
+.contenidoTotal{/* Contenedor principal */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+}
+
+/* Estilos para escritorio */
+@media(min-width: 1250px){
+.cardAdmin{
+    height: 310px;
+}
+/* Imagen */
+.cardAdmin img{
+    width: 170px;
+}
+}

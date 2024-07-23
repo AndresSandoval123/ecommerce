@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://i.postimg.cc/qRvXjXKP/favicon.png" type="image/x-icon">
+    <title>Datos_envio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- importacion de iconos -->
+    <link rel="stylesheet" href="../../estilos/publico/carritoCompras.css">
+    <link rel="stylesheet" href="../../estilos/publico/datosEnvio.css">
+
+
+</head>
+
+<body>
+    <main class="contenedorPrincipal">
+        <header class="encabezado" id="encabezadohead"><!-- Ya importado -->
+        </header>
+        <!-- DIV PRINCIPAL DE PAG DATOS DE ENVÍO -->
+        <div class="contenidoTotal">
+            <h2 style="text-align: center;">Ingrese la información para la entrega de su compra</h2>
+        <div class="carritoFinal">
+            <!-- DIV CON MENSAJE DE CONFIRMACIÓN DE COMPRA  -->
+            <div class="mensajeConfirmacion" id="mensajeConfirmacion" style="display: none;">
+                ¡Gracias por ser parte de Jampa! ❤️, tu pedido va en camino 🛍️
+            </div>
+            <!-- inicio DIV PARA INTEGRAR LA INFOR CARRITO  ALEXA -->    
+            
+            <!-- fin DIV PARA INTEGRAR LA INFOR CARRITO  ALEXA -->    
+
+            <!-- DIV CON INFOR DE LOS DATOS DE ENVÍO -->
+            <div class="inforEnvio">
+                <!-- DIV TITULO -->
+                <div class="datosEnvío">
+                    <h2>Datos de Envío</h2>
+                </div>
+                <!--FORMULARIO DE DATOS-->
+                <form id="formDatos" class="formDatos"> 
+                <div class="formDatos">                    
+                        <div class="nombre">
+                            <input type="text" name="nombre" id="nombre" required>
+                            <label for="nombre">Nombre</label>
+                        </div>
+                        <div class="direccion">
+                            <input type="text" name="direccion" id="direccion" required>
+                            <label for="direccion">Dirección</label>
+                        </div>
+
+                        <div class="ciudad">
+                            <input type="text" name="ciudad" id="ciudad" required>
+                            <label for="ciudad">Ciudad</label>
+                        </div>
+
+                        <div class="correo">
+                            <input type="email" name="correo" id="correo" required>
+                            <label for="correo">Correo</label>
+                        </div>
+
+                        <div class="telefono">
+                            <input type="text" name="telefono" id="telefono" required>
+                            <label for="telefono">Teléfono</label>
+                        </div>
+                    
+                        <div class="botonConfCompra">
+                            <input id="btnConfirmarCompra" type="submit" value="Confirmar Compra">
+                       </div>
+                      
+                    </form>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+
+
+        <!-- Footer -->
+        <footer class="footer">
+        </footer>
+    </main>
+
+    <!-- Se vincula el archivo js -->
+    <script src="../../componentes/publico/nav.js" type="module"></script>
+    <script src="../../consumoApi/ejeLocalStorage.js" type="module"></script>
+    <script src="../../scripts/datosEnvio.js"></script>
+    <script src="../../componentes/publico/footer.js"></script>
+    <script src="../../componentes/publico/carritoComprasComponente.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.11.1/sweetalert2.all.js" integrity="sha512-EETzuDes5NYDQpuTl1crNKcXk4ExLa3AUNNQJtqJsZ2Q9TTCSglaFI315jWZsZ/7lo9iSpBD5Dj67WE0vdP1ew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

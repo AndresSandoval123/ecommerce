@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://i.postimg.cc/qRvXjXKP/favicon.png" type="image/x-icon">
+  <title>Inicio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- importacion de iconos -->
+  <!-- <link rel="stylesheet" href="/maqueta/estilos/publico/home.css"> -->
+  <!-- <link rel="stylesheet" href="/maqueta/estilos/publico/footer.css"> -->
+  <!-- <link rel="stylesheet" href="/maqueta/estilos/publico/carritoCompras.css"> -->
+  <link rel="stylesheet" href="../../estilos/publico/home.css">
+  <link rel="stylesheet" href="../../estilos/publico/footer.css">
+  <link rel="stylesheet" href="../../estilos/publico/carritoCompras.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/maqueta/estilos/publico/modal.css">
+</head>
+
+<body>
+  <main class="contenedorPrincipal"><!--Encabezado Andres -->
+    <header class="encabezado" id="encabezadohead">
+    </header>
+    <div class="contenidoTotal">
+    </div>
+
+    <!-- CONTENEDOR PRINCIPLA CONTENIDO DEL HOME -->
+    <section class="contenidoHome">
+
+      <!-- BANNER DEL HOME -->
+      <section class="contenedorBanner">
+        <div class="bannerImg">
+          <div class="textoBanner">
+            <h1>ENCUENTRA TU ESTILO </h1>
+            <p class="textoBannerWeb">Explora nuestra exclusiva colección de ropa Plus Size para hombres y mujeres.
+              Porque
+              la moda no tiene talla, descubre prendas que realzan tu estilo y te hacen sentir increíble.</p>
+            <button class="btnProductos">PRODUCTOS</button>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- PRODUCTOS DESTACADOS -->
+      <section class="productosDestacados">
+        <h2>PRODUCTOS DESTACADOS</h2>
+        <div class="contenedorProducto">
+          <div> <i class='bx bxs-chevron-left'></i> </div>
+          <div class="contenedorTarjetasHome" id="tarjetaProductoHome">
+            <div class="contenedorTarjetasHomeJS" id="contenedorTarjetasHomeJS"></div>
+
+          </div>
+          <div> <i class='bx bxs-chevron-right'></i></div>
+        </div>
+      </section>
+
+      <!-- DONACIONES -->
+      <section class="donaciones">
+        <div class="donacionesImg">
+          <img src="https://i.postimg.cc/7Lk3nVQc/donar.jpg" alt="">
+          <div class="colorBanner">
+          </div>
+          <div class="textDonaciones">
+            <h3>¿Tienes ropa en buen estado que deseas donar?</h3>
+            <p>Tus donaciones de ropa no solo ayudan a quienes lo necesitan, sino que también promueven la
+              sostenibilidad y el cuidado del planeta.</p>
+            <button class="btnQuieroAyudar">QUIERO AYUDAR</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE JAMPA -->
+      <section class="sobreJampa">
+        <div class="sobreJampaTextos">
+          <h3>Sobre JAMPA</h3>
+          <p>En JAMPA SHOP, celebramos la diversidad corporal con ropa deportiva inclusiva y de calidad para personas de
+            talla plus. Nuestro objetivo es empoderarte y que te sientas increíble en tu propia piel.
+          </p>
+          <a class="masInfo" href="../../paginas/publico/nosotros.html">¡Descubre más!</a>
+        </div>
+      </section>
+
+      <!-- ESTADISTICAS DE VISITAS, VENTAS Y DONACIONES -->
+      <section class="estadisticas">
+        <div class="visitas">
+          <h2> 36 </h2>
+          <h3> Visitas</h3>
+        </div>
+        <div class="ventas">
+          <h2> 30 </h2>
+          <h3>Ventas</h3>
+        </div>
+        <div class="donadores">
+          <h2> 38 </h2>
+          <h3>Donacion</h3>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer">
+    </footer>
+
+    <section class="mainCarrito" id="mainCarrito"></section>
+
+    <section class="inforProducto" id="inforProducto"></section>
+  </main>
+
+  <!-- Se vincula el archivo js -->
+  <script src="../../componentes/publico/nav.js"></script>
+  <script src="../../componentes/publico/carritoComprasComponente.js " type="module"></script>
+  <script src="../../consumoApi/ejeLocalStorage.js" type="module"></script>
+  <script src="../../scripts/carritoCompras.js" type="module"></script>
+  <script src="../../scripts/home.js" type="module"></script>
+  <script src="../../scripts/modal.js" type="module"></script>
+  <script src="../../componentes/publico/footer.js"></script>
+</body>
+
+</html>

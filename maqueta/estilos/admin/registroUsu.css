@@ -1,0 +1,265 @@
+@import url(../../componentes/admin/css/navAdmin.css);
+
+/* IMPORTANTE
+Comenzar con mobile por buenas practicas */
+/* Estilos para mobile */
+ 
+/* @media screen and (max-width: 659px) { */
+ 
+.contenedorPrincipal{
+    /* background-color: red; */
+    min-height: 50vh
+
+}
+
+.contenidoTotal {
+    width: 90%;
+    margin: 0px auto;
+}
+
+h1 {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    margin: 25px;
+}
+
+/* ----------- Filtros de la tabla mobile ----------- */
+
+.filtros {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 60px;
+    /* grid-template-rows: repeat(4, 60px); */
+    grid-template-areas: 
+        "filId filId filNomb filNomb filNomb filNomb ";
+
+    gap: 10px;
+    margin: 10px;
+    width: 100%;
+    /* margin: 0px auto; */
+    overflow-x: hidden;
+    /* Evita el desplazamiento horizontal */
+    padding: 10px;
+    box-sizing: border-box; /* Incluye el padding y border en el tamaño total del elemento */
+   
+    /* background-color: #f2f2f2; */
+}
+
+.filtroId{
+    grid-area: filId;
+}
+
+.filtroNombre{
+    grid-area: filNomb;
+
+}
+
+.filtroId,
+.filtroNombre {
+    margin-bottom: 10px;
+}
+
+.filtros .filtroNombre label {
+    color: black;
+}
+
+
+.input-group {
+    display: flex;
+    /* margin-right: 10px; */
+    margin-top: 5px; /* Ajusta el espacio entre el input y el botón */
+   
+}
+
+/* Ancho del filtro id */
+.filtroId .input-group input[type="text"] {
+    width: 40px;
+}
+
+/* Ancho del filtro de nombre */
+.filtroNombre .input-group input[type="text"] {
+    width: 140px;
+}
+
+.input-group input[type="text"] {
+    margin-right: 5px; /* Ajusta el espacio entre el input y el botón */
+}
+
+.input-group button, .boton button {
+    padding: 5px 10px;
+    background-color: #033E8C;
+    color: white;
+}
+
+/*----------- Estilos session de los registros de productos mobile ---------- */
+
+.tablaClientes {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.tablaClientes th, .tablaClientes td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center; /* Centra el contenido */
+}
+
+.tablaClientes th {
+    background-color: #f2f2f2;
+    color: black;
+    word-break: break-word; /* Permite dividir palabras largas */
+    /* overflow: hidden; */
+    /* max-width: 15px; */
+}
+
+/* .tablaClientes th:hover{
+    transform: scale(2);
+
+} */
+
+.tablaClientes tr td img{
+    width: 30px;
+}
+
+#tablaClientesBody {
+    /* background-color: red; */
+}
+
+/* Estilos para vista tablet */
+@media(min-width: 659px) {
+    .filtros {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 60px;
+        /* grid-template-rows: repeat(4, 60px); */
+        grid-template-areas: 
+            "filId filId filNomb . . . ";
+    
+        gap: 10px;
+        margin: 10px;
+        width: 100%;
+        /* margin: 0px auto; */
+        overflow-x: hidden;
+        /* Evita el desplazamiento horizontal */
+        padding: 10px;
+        box-sizing: border-box; /* Incluye el padding y border en el tamaño total del elemento */
+       
+        /* background-color: #f2f2f2; */
+    }
+
+    .filtroId{
+        grid-area: filId;
+    }
+    
+    .filtroNombre{
+        grid-area: filNomb;
+    
+    }
+    /* ----------- Filtros de la tabla table ----------- */
+
+    
+.tablaClientes {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.tablaClientes th, .tablaClientes td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center; /* Centra el contenido */
+}
+
+.tablaClientes th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.tablaClientes tr td img{
+    width: 50px;
+}}
+
+
+/* Estilos para escritorio */
+@media(min-width: 1250px) {
+    .filtros {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 60px;
+        /* grid-template-rows: repeat(4, 60px); */
+        grid-template-areas: 
+            "filId filNomb filNomb . . . ";
+    
+        gap: 10px;
+        margin: 10px;
+        width: 100%;
+        /* margin: 0px auto; */
+        overflow-x: hidden;
+        /* Evita el desplazamiento horizontal */
+        padding: 10px;
+        box-sizing: border-box; /* Incluye el padding y border en el tamaño total del elemento */
+       
+        /* background-color: #f2f2f2; */
+    }
+
+    .filtroId{
+        grid-area: filId;
+    }
+    
+    .filtroNombre{
+        grid-area: filNomb;
+    
+    }
+    
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    /*.imagen1 .imagenCentrado label, 
+    .imagen2 .imagenCentrado label,
+    .productForm .nombreCentrado label,
+    .precio .precioCentrado label,
+    .talla label,
+    .cantidad .cantidadCentrado label,
+    .color label{
+        font-size: 18px;
+        color: red; 
+    }*/
+
+    /* .imagen1 .imagenCentrado label,
+    .imagen2 .imagenCentrado label{
+        display: block;
+        align-self: center;
+    } */
+
+    .boton {
+        grid-area: boton;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        /* background-color: green; */
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        /* Ajusta según sea necesario */
+        cursor: pointer;
+    }
+
+    .tablaProductos th{
+        font-size: 18px;
+    }
+    
+    .tablaProductos td{
+        font-size: 18px;
+    }
+    
+    .tablaProductos tr td img{
+        width: 100px;
+    }}

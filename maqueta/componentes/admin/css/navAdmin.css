@@ -1,0 +1,278 @@
+/* variables */
+:root {
+    --azul-color: #033E8C;
+    --azulClaro-color: #86CCDA;
+    --naranjaOscuro-color: #F27F0C;
+    --amarilloNaranja-color: #F7AD19;
+    --gris-color: #E3E3E3;
+    --blanco-color: #FFFFFF;
+    --negro-color: #1B1B1B;
+  }
+  
+  /* *FORMATEAR PAGINA */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--gris-color);
+  }
+  
+  /* Contenedor principal , Por buenas practicas se hace un contenedor donde este todo el body*/
+  .contenedorPrincipal {
+    width: 100vw;
+    max-width: 1440px;/* Se va adaptar a una resolucion maxima de 1440 por ancho */
+    min-height: 100vh;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--blanco-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .encabezado {
+    /* Estilos para el encabezado es normal */
+    width: 100%;
+    height: 120px;
+    background-color: var(--azul-color);
+  }
+
+
+.contenido{
+    display: grid;
+    grid-template-areas:"ham log user";
+    gap: 5px;
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+  }
+  
+  .logo {
+    display: grid;
+    grid-area: log;
+    place-content: center;
+    z-index: 1;
+  }
+  
+  .logo img {
+    width: 220px
+  }
+  
+  .barraBusqueda {
+    display: grid;
+    grid-area: bus;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  
+  .barraBusqueda input {
+    border: 0;
+    width: 70%;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    background-color: var(--gris-color);
+    padding: 0 10px;
+    font-size: 15px;
+    color: var(--azul-color);
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .barraBusqueda input::placeholder {
+    color: var(--azul-color);
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .barraBusqueda button {
+    border: 0;
+    width: 10%;
+    border-radius: 0 5px 5px 0;
+    background-color: var(--gris-color);
+    font-size: 20px;
+    color: var(--naranjaOscuro-color);
+  }
+  
+  .nav {
+    display: grid;
+    place-content: center;
+    --state-cerrar: scale(0);
+    --state-abrir: scale(1);
+    --state-menu: translate(-100%);
+  }
+  
+  .nav:target {
+    --state-menu: translate(0);
+    --state-cerrar: scale(1);
+    --state-abrir: scale(0);
+  }
+  
+  .icoMenu {
+    cursor: pointer;
+    transform: var(--state-abrir);
+  }
+  
+  .icoCerrar {
+    cursor: pointer;
+    transform: var(--state-cerrar);
+  }
+  
+  .barraNavegacion {
+    background-color: var(--gris-color);
+    position: absolute;/* para que salga de la grid */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    place-content: center;
+    align-content: start;
+    padding-top: 140px;
+    text-align: center;
+    transform: var(--state-menu);
+    transition: .8s;
+    /* le da animacion al menu */
+  }
+  
+  .barraNavegacion li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 300px;
+    height: 60px;
+    /* background-color: var(--blanco-color); */
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 4px 0px var(--negro-color); */
+  }
+  
+  .barraNavegacion a {
+    text-decoration: none;
+    color: var(--negro-color);
+  }
+  .barraNavegacion a:hover{
+    color: var(--naranjaOscuro-color);
+}
+  .icoCerrar,.icoMenu {
+    display: grid;
+    font-size: 40px;
+    grid-area: ham;
+    color: var(--naranjaOscuro-color);
+    place-content: center;
+    transition: .4s;/* le da animacion al boton */
+  }
+  
+  .icoUser {
+    display: grid;
+    grid-area: user;
+    font-size: 40px;
+    color: var(--gris-color);
+    place-content: center;
+    text-decoration: none;
+  }
+  .icoUser p{
+    font-size: 12px;
+}
+.icoUser :hover{
+    color: var(--naranjaOscuro-color);
+}
+  
+  .barraNavegacion .itemCerrarSesion {
+    display: none;
+  }
+  
+  .barraNavegacion .itemBarra1 {
+    order: -1;
+  }
+  
+  .barraNavegacion .itemBarra3 {
+    order: -1;
+  }
+  
+  /* Estilos para tablet*/
+  @media screen and (min-width: 659px) {
+  /* Colouser sus estilos aqui */
+  .contenido {
+    display: grid;
+    grid-template-areas: "log log user"
+                          "nav nav nav";
+                          gap: 0px;
+                          width: 100%;
+                          height: 120px;
+                          padding: 0px;
+    
+  }
+  .logo {
+    padding: 10px;
+    height: 80px;
+  }
+  .logo img {
+    width: 200px;
+  }
+  .barraNavegacion li {
+    width:auto;
+    height: 30px;
+    box-shadow: none;
+    font-size: 15px;
+  }
+  .barraNavegacion a {
+    color: var(--gris-color);
+  }
+  .barraNavegacion .itemCerrarSesion {
+    display: none;
+  }
+  .barraNavegacion .itemIniSesion {
+    display: none;
+  }
+  .nav {
+    --state-abrir: scale(0);
+    display: grid;
+    grid-area: nav;
+    place-content: unset;
+    gap: 0px;
+    padding: 0px;
+  }
+  .nav:target {
+    --state-cerrar: scale(0);
+  }
+  .barraNavegacion {
+    background-color: unset;/* unset se para que vuelva a su estado original */
+    position: static;
+    transform: unset;
+    transition: unset;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 0 10px;
+  }
+  .icoMenu, .icoCerrar{
+    display: none;
+  }
+  .icoUser {
+    display: grid;
+    grid-area: user;
+    font-size: 40px;
+    color: var(--gris-color);
+    place-content: center;
+  }
+  }
+  
+  /* Estilos para escritorio */
+  @media(min-width: 1250px) {
+    /* Colouser sus estilos aqui */
+    .contenido {
+      grid-template-columns: auto auto 5% 5%;
+    }
+    .logo img {
+      width: 300px;
+    }
+    .barraNavegacion {
+      padding: 0 20px;
+    }
+  }

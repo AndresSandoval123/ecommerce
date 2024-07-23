@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "nombre": "Camiseta",
+        "precio": 25.00,
+        "talla": "M",
+        "color": "Rojo",
+        "imagen1": "https://i.postimg.cc/vZF23Rx0/Ref-2-Sin-Logo-Rosa.png",
+        "imagen2": "https://i.postimg.cc/vZF23Rx0/Ref-2-Sin-Logo-Rosa.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Camiseta",
+        "precio": 25.00,
+        "talla": "M",
+        "color": "Rojo",
+        "imagen1": "https://i.postimg.cc/RZ7sYPc4/Ref-2-Sin-Logo-Naranja.png",
+        "imagen2": "https://i.postimg.cc/RZ7sYPc4/Ref-2-Sin-Logo-Naranja.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Camiseta",
+        "precio": 5.00,
+        "talla": "M",
+        "color": "Rojo",
+        "imagen1": "https://i.postimg.cc/PxR2D0kz/Ref-3-Con-Cremallera-Gris.png",
+        "imagen2": "https://i.postimg.cc/PxR2D0kz/Ref-3-Con-Cremallera-Gris.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Camiseta Verde",
+        "precio": 15.00,
+        "talla": "L",
+        "color": "Verde",
+        "imagen1": "https://i.postimg.cc/RZ7sYPc4/Ref-2-Sin-Logo-Naranja.png",
+        "imagen2": "https://i.postimg.cc/RZ7sYPc4/Ref-2-Sin-Logo-Naranja.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Camiseta Azul",
+        "precio": 20.00,
+        "talla": "S",
+        "color": "Azul",
+        "imagen1": "https://i.postimg.cc/vZF23Rx0/Ref-2-Sin-Logo-Rosa.png",
+        "imagen2": "https://i.postimg.cc/vZF23Rx0/Ref-2-Sin-Logo-Rosa.png"
+    },
+    {
+        "id": 6,
+        "nombre": "Camiseta Negra",
+        "precio": 30.00,
+        "talla": "XL",
+        "color": "Negro",
+        "imagen1": "https://i.postimg.cc/PxR2D0kz/Ref-3-Con-Cremallera-Gris.png",
+        "imagen2": "https://i.postimg.cc/PxR2D0kz/Ref-3-Con-Cremallera-Gris.png"
+    },
+    {
+        "id": 7,
+        "nombre": "Camiseta Blanca",
+        "precio": 8.00,
+        "talla": "XXL",
+        "color": "Blanco",
+        "imagen1": "https://i.postimg.cc/vZF23Rx0/Ref-2-Sin-Logo-Rosa.png",
+        "imagen2": "https://i.postimg.cc/vZF23Rx0/Ref-2-Sin-Logo-Rosa.png"
+    },
+    {
+        "id": 8,
+        "nombre": "Camiseta Amarilla",
+        "precio": 18.00,
+        "talla": "M",
+        "color": "Amarillo",
+        "imagen1": "https://i.postimg.cc/RZ7sYPc4/Ref-2-Sin-Logo-Naranja.png",
+        "imagen2": "https://i.postimg.cc/RZ7sYPc4/Ref-2-Sin-Logo-Naranja.png"
+    },
+    {
+        "id": 9,
+        "nombre": "Camiseta Naranja",
+        "precio": 22.00,
+        "talla": "L",
+        "color": "Naranja",
+        "imagen1": "https://i.postimg.cc/PxR2D0kz/Ref-3-Con-Cremallera-Gris.png",
+        "imagen2": "https://i.postimg.cc/PxR2D0kz/Ref-3-Con-Cremallera-Gris.png"
+    },
+    {
+        "id": 10,
+        "nombre": "Camiseta Morada",
+        "precio": 35.00,
+        "talla": "XL",
+        "color": "Morado",
+        "imagen1": "https://i.postimg.cc/RZ7sYPc4/Ref-2-Sin-Logo-Naranja.png",
+        "imagen2": "https://i.postimg.cc/RZ7sYPc4/Ref-2-Sin-Logo-Naranja.png"
+    }
+]
