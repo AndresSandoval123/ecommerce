@@ -1,7 +1,4 @@
-[build]
-publish = "maqueta/paginas/publico"
-
 [[redirects]]
 from = "/*"
-to = "/home.html"
+to = "maqueta/paginas/publico/home.html"
 status = 200
